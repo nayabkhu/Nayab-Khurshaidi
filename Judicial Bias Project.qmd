@@ -93,6 +93,7 @@ gt_tbl1 <- gt_tbl1 %>%
 
 ```{r, echo = FALSE}
 gt_tbl1 
+
 ```
 
 ```{r, include = FALSE}
