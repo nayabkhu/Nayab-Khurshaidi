@@ -31,9 +31,9 @@ India, a country rife with gender-related violence, ranks 128th of 177 countries
 
 Judicial bias in the legal system is inextricably linked to other forms of gender bias in society as well, and can serve as an interesting unique avenue to view gender bias in a society. However, judicial bias is not only salient in the sphere of violent crimes against women. Reductions in gender bias in society and increase in women entering the workplace has shown to be a key indicator of increased overall productivity in society, resulting in greater economic outcomes [@Holland_Ell_2023]. A reduction in gender bias towards women in the workforce in the society has been causally related with an increase in GDP, due to an increase in overall productivity and specialized skills [@Holland_Ell_2023]. Additionally, It is well documented that a stronger, independent judiciary is an indicator of economic growth [@Kerry_Lauge]. This project will attempt to examine these theories in the context of India specifically.
 
-Two prominent studies have been conducted regarding the outcomes for women in the judicial system in India. Utilizing over 5 million lower court cases in an 8 year period, although [@casesgroup] found no specific in-group biases from male judges towards female defendants, [@jassal2023does] does finds that women are still disadvantaged in the Indian courts through discrimination at several different levels including higher court dismissals and higher accused acquittals. Furthermore, in a judicial case review analysis by [@badonijudicial], it was found that judicial stereotyping was clearly evident through language in decisions from several cases concerning sexual violence against women, where women were described in terms of their “provocative clothing,” or of being “habitual to intercourse.” Moreover, it seems there is a general consensus in the public view of a need for judicial reform and improvements in India–in a study by [@garg2024role] found that 54% of people believe that a more proactive role of the Indian judiciary is “required in addressing gender-based discrimination and violence,” and 79% supported “specialized courts/tribunals to handle cases related to women’s rights.” Although judicial reform and bias is an ongoing conversation, only 2 investigations [@casesgroup; @jassal2023does] utilize real case data from India’s lower courts to analyze this issue at the state-level, rather than the national level. Furthermore, the majority of the research in India focuses on qualitative reviews of case laws and decisions, rather than outcomes. My project aims to fill this gap in the literature by addressing outcomes for women using state level panel data.
+Two prominent studies have been conducted regarding the outcomes for women in the judicial system in India. Utilizing over 5 million lower court cases in an 8 year period, although @casesgroup found no specific in-group biases from male judges towards female defendants, @jassal2023does does finds that women are still disadvantaged in the Indian courts through discrimination at several different levels including higher court dismissals and higher accused acquittals. Furthermore, in a judicial case review analysis by @badonijudicial, it was found that judicial stereotyping was clearly evident through language in decisions from several cases concerning sexual violence against women, where women were described in terms of their “provocative clothing,” or of being “habitual to intercourse.” Moreover, it seems there is a general consensus in the public view of a need for judicial reform and improvements in India–in a study by @garg2024role found that 54% of people believe that a more proactive role of the Indian judiciary is “required in addressing gender-based discrimination and violence,” and 79% supported “specialized courts/tribunals to handle cases related to women’s rights.” Although judicial reform and bias is an ongoing conversation, only 2 investigations [@casesgroup; @jassal2023does] utilize real case data from India’s lower courts to analyze this issue at the state-level, rather than the national level. Furthermore, the majority of the research in India focuses on qualitative reviews of case laws and decisions, rather than outcomes. My project aims to fill this gap in the literature by addressing outcomes for women using state level panel data.
 
-Access to justice is recognized globally as a basic human right. Indeed Articles 5 through 11 of the Universal Declaration of Human Rights lay out the scope of this right to justice, and outline the rights to fair trials and punishments [@United-Nations]. As [@Sandefur_2008] highlights, access to justice can both expose and exacerbate societal inequalities. Furthermore, as UN Women highlights, women are usually the poorest and most marginalized parts of society, and often lack agency, and more robust judicial institutions create foundations for women to “assert and claim their social, economic, cultural, political and civil rights [@UN-Women]. The courts have long been an avenue through which marginalized groups can access rights that have been denied to them by society, or to gain equal footing with other segments of society. Therefore, the preservation of a fair and just judicial system is extremely important, and especially important for women, especially in a country such as India, where, as I have previously established, there is such a large proliferation of gender based violence. Furthermore, as I have also established, access to justice is often better for society overall economically. I aim to add on to the research in this field by zooming in on India specifically to examine these trends.
+Access to justice is recognized globally as a basic human right. Indeed Articles 5 through 11 of the Universal Declaration of Human Rights lay out the scope of this right to justice, and outline the rights to fair trials and punishments [@United-Nations]. As @Sandefur_2008 highlights, access to justice can both expose and exacerbate societal inequalities. Furthermore, as UN Women highlights, women are usually the poorest and most marginalized parts of society, and often lack agency, and more robust judicial institutions create foundations for women to “assert and claim their social, economic, cultural, political and civil rights [@UN-Women]. The courts have long been an avenue through which marginalized groups can access rights that have been denied to them by society, or to gain equal footing with other segments of society. Therefore, the preservation of a fair and just judicial system is extremely important, and especially important for women, especially in a country such as India, where, as I have previously established, there is such a large proliferation of gender based violence. Furthermore, as I have also established, access to justice is often better for society overall economically. I aim to add on to the research in this field by zooming in on India specifically to examine these trends.
 
 **To address these issues, I will examine the question:**
 
@@ -43,7 +43,7 @@ Access to justice is recognized globally as a basic human right. Indeed Articles
 
 I predict that on average, lower judicial biases in states in India (measured through differences in acquittal rates between men and women) will result in higher GDP’s in those states, displaying an inverse relationship.
 
-Research emphasizes protections and power of enforcement that is vested in the judiciary [@Kerry_Lauge]. Substantial research emphasizes the interconnectedness of the legal system and economic performance. [@Lorizio_Gurrieri_2014] found, for example, that economic growth in Italy was negatively affected by the confidence investors, businesses and households had in the judicial system. Furthermore, a study that used panel data from 73 countries across world regions found that access to justice is a significant positive determinant of economic growth within countries @deseau2019access. Additionally, the researchers hypothesized that the impact of access to justice could possibly be stronger in less developed countries, such as India [@deseau2019access]. I predict, therefore, that lower judicial biases will result in an increased ability of women to have equal opportunity and legal protection, resulting in a greater participation in the workforce, an increase in the utilization of human capital, and resulting greater economic prosperity and outcomes in those states, as measured through GDP.
+Research emphasizes protections and power of enforcement that is vested in the judiciary [@Kerry_Lauge]. Substantial research emphasizes the interconnectedness of the legal system and economic performance. @Lorizio_Gurrieri_2014 found, for example, that economic growth in Italy was negatively affected by the confidence investors, businesses and households had in the judicial system. Furthermore, a study that used panel data from 73 countries across world regions found that access to justice is a significant positive determinant of economic growth within countries [@deseau2019access]. Additionally, the researchers hypothesized that the impact of access to justice could possibly be stronger in less developed countries, such as India [@deseau2019access]. I predict, therefore, that lower judicial biases will result in an increased ability of women to have equal opportunity and legal protection, resulting in a greater participation in the workforce, an increase in the utilization of human capital, and resulting greater economic prosperity and outcomes in those states, as measured through GDP.
 
 # Research Design
 
@@ -92,97 +92,10 @@ gt_tbl1 <- gt_tbl1 %>%
 ```
 
 ```{r, echo = FALSE}
+#print table
 gt_tbl1 
 
 ```
-
-```{r, include = FALSE}
-#| warning: false
-
-#ggplot of variables and gdp
-# Scatterplot for diff_acquittal vs. gdp
-plot_acquittal <- ggplot(df, aes(x = diff_acquittal, y = GDP)) +
-  geom_point() +
-  #add a line of best fit
-  geom_smooth(method = "loess", se = FALSE, color = "blue") +
-  #add a line at the x = 0 
-  geom_vline(xintercept = 0, linetype = "dashed", color = "red") +
-  #adding clarifying variable 
-  geom_text(aes(x = -4, y = 2750000, label = "Higher Acquittal Rates\n for Women"), hjust = 0.5, vjust = 1) + 
-  geom_text(aes(x = 7.5, y = 2750000, label = "Higher Acquittal Rates\n for Men"), hjust = 0.5, vjust = 1) +
-  #adding titles and a caption
-  labs(
-    title = "Diffirence in Acquittal Rate  vs. GDP",
-    x = "Difference in Acquittal Rates (Male - Female)",
-    y = "Statewide GDP (Crores)",
-    caption = "Source: Development Data Lab\nGovernment of India Ministry of Statistics\nNote: This plot shows the relationship between the Diff_Acquittal variable and statewide GDP.The Diff_Acquittal \n variable was generated by subtracting the Acquittal Rate for Female Defendants from the Acquittal Rate for Male \n Defendants. A positive difference indicates that men were acquitted more, on average, then women. A negative\n difference indicates that women were acquitted at higher rates then men. A simple line of best fit shows a slight \n negative correlation between the difference in acquittal rate and GDP.  N = 224 "
-  ) +
-  theme(
-    plot.title = element_text(hjust = 0.5),
-    plot.caption = element_text(hjust = 0)
-  )
-
-
-# Scatterplot for diff_dismissal vs. gdp
-plot_dismissal <- ggplot(df, aes(x = diff_dismissal, y = GDP )) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE, color = "blue") +
-  geom_vline(xintercept = 0, linetype = "dashed", color = "red") +
-  geom_text(aes(x = -10, y = 2750000, label = "Higher Dismissal Rates\n for Women"), hjust = 0.5, vjust = 1) + 
-  geom_text(aes(x = 3, y = 2750000, label = "Higher Dismissal Rates\n for Men"), hjust = 0.5, vjust = 1) +
-  labs(
-    title = "Difference in Dismissal Rate vs. GDP",
-    x = "Difference in Dismissal Rates (Male - Female)",
-    y = "Statewide GDP (Crores)",
-    caption = "Source: Development Data Lab\nGovernment of India Ministry of Statistics\nNote: This plot shows the relationship between the Diff_Dismissal variable and statewide GDP.The Diff_Dismissal \n variable was generated by subtracting the Dismissal Rate for Female Defendants from the Dismissal Rate for Male \n Defendants. A positive difference indicates that men were dismissed more, on average, then women. A negative\n difference indicates that women were dismissed at higher rates then men. A simple line of best fit shows a  very slight \n positive correlation between the difference in dismissal rate and GDP.  N = 224 "
-  ) +
-  theme(
-    plot.title = element_text(hjust = 0.5),
-    plot.caption = element_text(hjust = 0)
-  )
-
-
-# Scatterplot for diff_conviction vs. gdp
-plot_conviction <- ggplot(df, aes(x = diff_conviction, y = GDP)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE, color = "blue") +
-  geom_vline(xintercept = 0, linetype = "dashed", color = "red") +
-  geom_text(aes(x = -4, y = 2750000, label = "Higher Conviction Rates\n for Women"), hjust = 0.5, vjust = 1) + 
-  geom_text(aes(x = 6, y = 2750000, label = "Higher Conviction Rates\n for Men"), hjust = 0.5, vjust = 1) +
-  labs(
-    title = "Difference in Conviction Rate vs. GDP",
-    x = "Difference in Conviction Rates (Male - Female)",
-    y = "Statewide GDP (Crores)",
-    caption = "Source: Development Data Lab\nGovernment of India Ministry of Statistics\nNote: This plot shows the relationship between the Diff_Conviction variable and statewide GDP.The Diff_Conviction \n variable was generated by subtracting the Conviction Rate for Female Defendants from the Conviction Rate for Male \n Defendants. A positive difference indicates that men were convicted more, on average, then women. A negative\n difference indicates that women were convicted at higher rates then men. A simple line of best fit shows a slight \n positive correlation between the difference in conviction rate and GDP.  N = 224"
-  ) +
-  theme(
-    plot.title = element_text(hjust = 0.5),
-    plot.caption = element_text(hjust = 0)
-  )
-```
-
-```{r, echo = FALSE}
-#| warning: false
-
-plot_acquittal
-```
-
-This plot shows that the majority of states have higher acquittal rates for men than women, as the majority of data points are concentrated on the right side of the graph. On this side of the graph, there appears to be a negative relationship between the difference in acquittal rates and GDP, meaning that areas with more equal acquittal rates tend to display a higher GDP. This would support my hypothesis, as it would predict that lower judicial bias is indicative of economic growth. However, it is important to note that this relationship is not necessarily linear, which I will examine in my analysis. There appears to be a slight U-shape which begins at the point where the difference between the male and female acquittal rates is zero. 
-
-```{r, echo = FALSE}
-#| warning: false
-
-plot_dismissal
-```
-
-This plot shows that the majority of states have higher dismissal rates for women than men, as the majority of data points are concentrated on the left side of the graph. On this side of the graph, there appears to be a slight positive relationship between the difference in dismissal rates and GDP, meaning that areas with more equal dismissal rates tend to display a higher GDP. This would support my hypothesis, as it would predict that lower judicial bias is indicative of economic growth.
-
-```{r, echo = FALSE}
-#| warning: false
-plot_conviction
-```
-
-This plot shows that the majority of states have higher conviction rates for men than women, as the majority of data points are concentrated on the right side of the graph. On this side of the graph, there appears to be a slight positive relationship between the difference in conviction rates and GDP, meaning that areas with more disparate conviction rates tend to display a higher GDP. This would not support my hypothesis. However, in this plot, unlike the others, we can see that a large number of data points are closer to 0 - meaning that conviction rates are usually more equal for men and women compared to other measures.
 
 ## Regression Model
 
@@ -288,9 +201,84 @@ $$
 
 # Findings
 
+```{r, include = FALSE}
+#| warning: false
+
+#ggplot of variables and gdp
+# Scatterplot for diff_acquittal vs. gdp
+plot_acquittal <- ggplot(df, aes(x = diff_acquittal, y = GDP)) +
+  geom_point() +
+  #add a line of best fit
+  geom_smooth(method = "loess", se = FALSE, color = "blue") +
+  #add a line at the x = 0 
+  geom_vline(xintercept = 0, linetype = "dashed", color = "red") +
+  #adding clarifying variable 
+  geom_text(aes(x = -4, y = 2750000, label = "Higher Acquittal Rates\n for Women"), hjust = 0.5, vjust = 1) + 
+  geom_text(aes(x = 7.5, y = 2750000, label = "Higher Acquittal Rates\n for Men"), hjust = 0.5, vjust = 1) +
+  #adding titles and a caption
+  labs(
+    title = "Diffirence in Acquittal Rate  vs. GDP",
+    x = "Difference in Acquittal Rates (Male - Female)",
+    y = "Statewide GDP (Crores)",
+    caption = "Source: Development Data Lab\nGovernment of India Ministry of Statistics\nNote: This plot shows the relationship between the Diff_Acquittal variable and statewide GDP.The Diff_Acquittal \n variable was generated by subtracting the Acquittal Rate for Female Defendants from the Acquittal Rate for Male \n Defendants. A positive difference indicates that men were acquitted more, on average, then women. A negative\n difference indicates that women were acquitted at higher rates then men. A simple line of best fit shows a slight \n negative correlation between the difference in acquittal rate and GDP.  N = 224 "
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0)
+  )
+
+
+# Scatterplot for diff_dismissal vs. gdp
+plot_dismissal <- ggplot(df, aes(x = diff_dismissal, y = GDP )) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "red") +
+  geom_text(aes(x = -10, y = 2750000, label = "Higher Dismissal Rates\n for Women"), hjust = 0.5, vjust = 1) + 
+  geom_text(aes(x = 3, y = 2750000, label = "Higher Dismissal Rates\n for Men"), hjust = 0.5, vjust = 1) +
+  labs(
+    title = "Difference in Dismissal Rate vs. GDP",
+    x = "Difference in Dismissal Rates (Male - Female)",
+    y = "Statewide GDP (Crores)",
+    caption = "Source: Development Data Lab\nGovernment of India Ministry of Statistics\nNote: This plot shows the relationship between the Diff_Dismissal variable and statewide GDP.The Diff_Dismissal \n variable was generated by subtracting the Dismissal Rate for Female Defendants from the Dismissal Rate for Male \n Defendants. A positive difference indicates that men were dismissed more, on average, then women. A negative\n difference indicates that women were dismissed at higher rates then men. A simple line of best fit shows a  very slight \n positive correlation between the difference in dismissal rate and GDP.  N = 224 "
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0)
+  )
+
+
+# Scatterplot for diff_conviction vs. gdp
+plot_conviction <- ggplot(df, aes(x = diff_conviction, y = GDP)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "red") +
+  geom_text(aes(x = -4, y = 2750000, label = "Higher Conviction Rates\n for Women"), hjust = 0.5, vjust = 1) + 
+  geom_text(aes(x = 6, y = 2750000, label = "Higher Conviction Rates\n for Men"), hjust = 0.5, vjust = 1) +
+  labs(
+    title = "Difference in Conviction Rate vs. GDP",
+    x = "Difference in Conviction Rates (Male - Female)",
+    y = "Statewide GDP (Crores)",
+    caption = "Source: Development Data Lab\nGovernment of India Ministry of Statistics\nNote: This plot shows the relationship between the Diff_Conviction variable and statewide GDP.The Diff_Conviction \n variable was generated by subtracting the Conviction Rate for Female Defendants from the Conviction Rate for Male \n Defendants. A positive difference indicates that men were convicted more, on average, then women. A negative\n difference indicates that women were convicted at higher rates then men. A simple line of best fit shows a slight \n positive correlation between the difference in conviction rate and GDP.  N = 224"
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0)
+  )
+```
+
+```{r, echo = FALSE}
+#| warning: false
+
+plot_acquittal
+```
+
+This plot shows that the majority of states have higher acquittal rates for men than women, as the majority of data points are concentrated on the right side of the graph. On this side of the graph, there appears to be a negative relationship between the difference in acquittal rates and GDP, meaning that areas with more equal acquittal rates tend to display a higher GDP. This would support my hypothesis, as it would predict that lower judicial bias is indicative of economic growth. However, it is important to note that this relationship is not necessarily linear, which I will examine in my analysis. There appears to be a slight U-shape which begins at the point where the difference between the male and female acquittal rates is zero.
+
 ```{r, echo=FALSE}
+#running the model
 model1 <- lm(GDP ~ diff_acquittal, data = df)
 
+#printing the model summary
 modelsummary(
   model1,
   estimate  = "{estimate}{stars} ({std.error})",
@@ -299,8 +287,11 @@ modelsummary(
   title = "GDP and Difference in Acquittal Rate")
 ```
 
+From my first regression model, we can see that the estimated decrease in GDP for each unit that the acquittal rate moves closer to a higher male acquittal bias is approximately 39,791 crore. Given the fact that the mean GDP across Indian states was approximately 607,560 crore, this is a pretty substantial effect. Furthermore, the test shows a statistically significant result. Furthermore, the intercept is 550805. The R squared value is 0.067, indicating that about 6.7% of the variability in GDP can be explained by the variance in the difference in acquittal rates between males and females in this model. Considering the number of factors that can influence GDP, in this context, 7% of the variability in GDP being explained by the difference in acquittal rate is quite substantial.
+
 ```{r, echo=FALSE}
 
+#running a model with squared terms on the IV
 df$diff_acquittal_squared <- df$diff_acquittal^2
 
 # Fit the regression model
@@ -315,9 +306,13 @@ modelsummary(
   title = "GDP and Difference in Acquittal Rate, squared")
 ```
 
+When I attempt to model the U-Shape by including a squared term, we can see that there is a slightly larger coefficient on the diff_acquittal variable, with a one unit move towards a higher acquittal rate for men leading to a 56,614 crore decrease in GDP. The intercept is almost the same, with the model predicting that when there is no difference in acquittal rates (no bias) the state’s GDP will be approximately 545,782 crores. Additionally, the r-squared value is slightly higher in this model, with a value of 0.074 indicating that 7.4% of the variability in GDP can be explained by variability in the difference in acquittal rate when attempting to control for the U-shape. This is even stronger, suggesting that this relationship is indeed non-linear, as this model is a better fit.
+
 ```{r, echo=FALSE}
+#running the model
 modelcontrol <- lm(GDP ~ diff_acquittal + pop_growth, data = df)
 
+#printing the model summary
 modelsummary(
   modelcontrol,
   estimate  = "{estimate}{stars} ({std.error})",
@@ -326,7 +321,24 @@ modelsummary(
   title = "GDP and Difference in Acquittal Rate with Control")
 ```
 
+In the third model, I examined the relationship between GDP and the difference in acquittal rates when controlling for population growth. It appears that holding population growth constant, a one unit move towards a higher male bias in acquittal rates leads to a 41698 crore decrease in GDP. Although this is still a significant result of substantial magnitude, there appears to be a slightly smaller effect on GDP when controlling for population growth. Finally, the r squared value is 0.067, suggesting that 6.7% of the variation in GDP can be explained by the change in the acquittal rate bias.
+
 # Empirical Extension Findings
+
+```{r, echo = FALSE}
+#| warning: false
+
+plot_dismissal
+```
+
+This plot shows that the majority of states have higher dismissal rates for women than men, as the majority of data points are concentrated on the left side of the graph. On this side of the graph, there appears to be a slight positive relationship between the difference in dismissal rates and GDP, meaning that areas with more equal dismissal rates tend to display a higher GDP. This would support my hypothesis, as it would predict that lower judicial bias is indicative of economic growth.
+
+```{r, echo = FALSE}
+#| warning: false
+plot_conviction
+```
+
+This plot shows that the majority of states have higher conviction rates for men than women, as the majority of data points are concentrated on the right side of the graph. On this side of the graph, there appears to be a slight positive relationship between the difference in conviction rates and GDP, meaning that areas with more disparate conviction rates tend to display a higher GDP. This would not support my hypothesis. However, in this plot, unlike the others, we can see that a large number of data points are closer to 0 - meaning that conviction rates are usually more equal for men and women compared to other measures.
 
 ```{r, echo=FALSE}
 model3 <- lm(GDP ~ diff_dismissal, data = df)
@@ -339,6 +351,8 @@ modelsummary(
   title = "GDP and Difference in Dismissal Rate")
 ```
 
+For my first empirical extension, I looked at the relationship between GDP and the difference in dismissal rates between men and women. It appears that for every one unit change towards a higher dismissal rate for men, there is an 8285 crore increase in GDP. However, these results are not statistically significant, and the magnitude of the results are not large. Furthermore, the R-squared is extremely small, with a mere 0.1% of variation in GDP being explained by the variance of the difference in dismissal rate.
+
 ```{r, echo=FALSE}
 model4 <- lm(GDP ~ diff_conviction, data = df)
 
@@ -348,6 +362,71 @@ modelsummary(
              statistic = NULL,
   gof_omit = 'IC|RMSE|Log|F|R2$|Std.',
   title = "GDP and Difference in Conviction Rate")
+```
+
+Next, I looked at the relationship between GDP and the difference in conviction rates between men and women. The model indicates that a one unit increase towards a higher conviction rate for men is indicative of an increase in the GDP of 73,096 crore. These results are both significant and of a substantial magnitude. Furthermore, the R squared value indicates that about 8% of the variation in GDP can be explained by the difference in conviction rates.
+
+```{r, include = FALSE}
+#| warning: false
+
+#ggplot of variables and gdp
+# Scatterplot for mmr vs. gdp
+plot_mmr <- ggplot(df, aes(x = mmr, y = GDP)) +
+  geom_point() +
+  #add a line of best fit
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  #adding titles and a caption
+  labs(
+    title = "Maternal Mortality Ratio vs. GDP",
+    x = "Maternal Mortality Ratio",
+    y = "Statewide GDP (Crores)",
+    caption = "Source: Reserve Bank of India\nGovernment of India Ministry of Statistics\nNote: This plot shows the relationship between the maternal mortaility variable and statewide GDP.\n A simple line of best fit shows a slight negative correlation between the maternal mortality ratio and GDP.  N = 122 "
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0)
+  )
+
+plot_tfr <- ggplot(df, aes(x = tfr, y = GDP)) +
+  geom_point() +
+  #add a line of best fit
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  #adding titles and a caption
+  labs(
+    title = "Total Fertility Rate vs. GDP",
+    x = "Maternal Mortality Ratio",
+    y = "Statewide GDP (Crores)",
+    caption = "Source: Reserve Bank of India\nGovernment of India Ministry of Statistics\nNote: This plot shows the relationship between the total fertility rate and statewide GDP.\n A simple line of best fit shows a slight negative correlation between the total fertility rate and GDP.  N = 194 "
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0)
+  )
+
+plot_unemr <- ggplot(df, aes(x = unemr, y = GDP)) +
+  geom_point() +
+  #add a line of best fit
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  #adding titles and a caption
+  labs(
+    title = "Female Unemployment Rate vs. GDP",
+    x = "Female Unemployment Rate",
+    y = "Statewide GDP (Crores)",
+    caption = "Source: Reserve Bank of India\nGovernment of India Ministry of Statistics\nNote: This plot shows the relationship between the female unemployment rate variable and statewide GDP.\n A simple line of best fit shows a slight negative correlation between the female unemployment rate and GDP.  N = 122 "
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.caption = element_text(hjust = 0)
+  )
+
+
+```
+
+```{r, echo=FALSE}
+#| warning: false
+plot_mmr
+plot_tfr
+plot_unemr
 ```
 
 ```{r, echo=FALSE}
@@ -382,6 +461,106 @@ modelsummary(
   title = "GDP and Female Unemployment Rate")
 ```
 
+Finally, I tested three different indicators of gender outcomes in society in order to compare and contrast them with the access to justice variables. All three increases lead to decrease in GDP, as predicted. Furthermore, all three indicators are significant. However, the total fertility rate appears to have an effect of much greater magnitude on the GDP, with a one unit increase (one child increase) in the total fertility rate resulting in a 201,453 crore decrease in the GDP.
+
 # Discussion and Policy Implications
+
+My findings indicate that a greater male bias in acquittals is related to lower GDP levels, which supports my hypothesis that lower judicial biases will result in higher levels of GDP, and supports the idea that women contribute positively to the growth of society when they are allowed the tools and resources to do so. Furthermore, this result holds when controlling for statewide population growth as well. However, I did not find any significant results when examining the difference in dismissals, which indicates that different judicial bias measures may yield different results. This is supported by the idea that for conviction rates, higher male conviction rates were indicative of a higher GDP. There are many reasons why such variation may be the case. One, it may be due to a composition effect, where cases that are brought against women are usually lower severity crimes, and therefore result in far less convictions, with little effect on GDP. Furthermore, this may also be caused by the many unobserved potential confounders, which was the greatest limitation of this study. Due to the limited data available, it was not possible to test for many confounders at the state level specifically. Therefore, as an extension to this project, it would be worthwhile to gather both data and knowledge surrounding other facets of the Indian judiciary, as well as border law enforcement. Additionally, it might be interesting to conduct this study in a different country where there is a similar state structure but more data available.
+
+My results are further substantiated by the three indicators of gender bias in a society and their relationship with GDP. As an increase in all three is associated with a decrease in the GDP, one can safely conclude that there is a relationship between gender bias as a whole and with economic growth. Although my results indicate that this may also be true at the judicial level specifically, it is worthwhile to dive deeper into the specific mechanisms that may relate judicial outcomes and growth.
+
+Overall, the implications for policy suggest a greater need to invest in women’s access to justice in India. Although further research may be needed to specifically determine the affects on GDP, women’s access to justice remains a human right, and therefore governments should take steps to:
+
+-   Ensure increased transparency in judicial decisions with female defendants
+
+-   Ensure bias training for judges
+
+-   Ensure women have safe and easy access to the courts.
+
+# Appendix:
+
+1.  Variable 1: Difference in Acquittal Rate for Female and Male Defendants
+
+    -   Variable Creation: Cases were coded for acquittals and aggregated to the state level to generate the percent of cases which resulted in acquittals for both female and male defendants. The female acquittal rate was then subtracted from the male acquittal rate in order to create a difference in acquittal rate variable. The variable is negative if there was a greater male acquittal rate, and negative if there was a greater female acquittal rate. 
+
+    -   Source: [Development Data Lab Judicial Data Portal](https://www.devdatalab.org/judicial-data)
+
+    -   Unit: Difference in Rate 
+
+    -   Level of Analysis: State - The final, cleaned dataset includes acquittal rate data from 28 states and 1 union territory in India. 4 Union Territories were excluded from the analysis, because they either did not have sufficient GDP panel data (Diu and Daman, Dadra Nagar Haveli, and Ladakh) available, or due to ongoing boundary conflict (Jammu and Kashmir).
+
+    -   Sample: This variable was generated from 81 million district court cases from 2010 - 2018, which the original researchers constructed by scraping case records from an online repository ([Indian e-Courts platform](https://districts.ecourts.gov.in/)) covering 7000+ district courts in India. The original e-courts data includes essential dates, petitioner and respondent names, the relevant legal statues, and the final disposition. The original researchers than used a Long Short-Term Memory model in order to assign male/female indicators to the cases based on the names, which were then anonymized.  
+
+2.  Variable 2: Difference in Dismissal Rate for Female and Male Defendants 
+
+    -   Variable Creation: Cases were coded for dismissals and aggregated to the state level to generate the percent of cases which resulted in dismissals for both female and male defendants. The female dismissal rate was then subtracted from the male dismissal rate in order to create a difference in dismissal rate variable. The variable is negative if there was a greater male dismissal rate, and negative if there was a greater female dismissal rate.
+
+    -   Source: [Development Data Lab Judicial Data Portal](https://www.devdatalab.org/judicial-data)
+
+    -   Unit: Difference in Rate 
+
+    -   Level of Analysis: State - The final, cleaned dataset includes acquittal rate data from 28 states and 1 union territory in India. 4 Union Territories were excluded from the analysis, because they either did not have sufficient GDP panel data (Diu and Daman, Dadra Nagar Haveli, and Ladakh) available, or due to ongoing boundary conflict (Jammu and Kashmir).
+
+    -   Sample: This variable was generated from 81 million district court cases from 2010 - 2018, which the original researchers constructed by scraping case records from an online repository ([Indian e-Courts platform](https://districts.ecourts.gov.in/)) covering 7000+ district courts in India. The original e-courts data includes essential dates, petitioner and respondent names, the relevant legal statues, and the final disposition. The original researchers than used a Long Short-Term Memory model in order to assign male/female indicators to the cases based on the names, which were then anonymized.  
+
+3.  Variable 3: Difference in Conviction Rate for Female and Male Defendants 
+
+    -   Variable Creation: Cases were coded for convictions and aggregated to the state level to generate the percent of cases which resulted in convictions for both female and male defendants. The female conviction rate was then subtracted from the male conviction rate in order to create a difference in conviction rate variable. The variable is negative if there was a greater male conviction rate, and negative if there was a greater female conviction rate. 
+
+    -   Source: [Development Data Lab Judicial Data Portal](https://www.devdatalab.org/judicial-data)
+
+    -   Unit: Difference in Rate 
+
+    -   Level of Analysis: State - The final, cleaned dataset includes acquittal rate data from 28 states and 1 union territory in India. 4 Union Territories were excluded from the analysis, because they either did not have sufficient GDP panel data (Diu and Daman, Dadra Nagar Haveli, and Ladakh) available, or due to ongoing boundary conflict (Jammu and Kashmir).
+
+    -   Sample: This variable was generated from 81 million district court cases from 2010 - 2018, which the original researchers constructed by scraping case records from an online repository ([Indian e-Courts platform](https://districts.ecourts.gov.in/)) covering 7000+ district courts in India. The original e-courts data includes essential dates, petitioner and respondent names, the relevant legal statues, and the final disposition. The original researchers than used a Long Short-Term Memory model in order to assign male/female indicators to the cases based on the names, which were then anonymized.  
+
+4.  Variable 4: Gross State Domestic Product 
+
+    -   Source: Government of India - Ministry of Statistics and Programme Implementation: [Source](https://mospi.gov.in/data) (File 17) 
+
+    -   Unit: Prices in Crores (10 Million) 
+
+    -   Level of Analysis: State Level 
+
+    -   Sample: Yearly GDP from 2011 - 2023, provided by the national government.
+
+5.  Co-variate Variable: State-wise Natural Population Growth Rate
+
+-   Years available: 2011 - 2020
+
+-   Unit of Analysis: State
+
+-   Source: [Reserve Bank of India, Handbook of Statistics on Indian States](https://www.rbi.org.in/Scripts/AnnualPublications.aspx?head=Handbook+of+Statistics+on+Indian+States)
+
+6.  Maternal Mortality Ratio:
+
+    -   Definition: (Number of maternal deaths / Number of live births) x100000
+
+    -   Source: [Reserve Bank of India, Handbook of Statistics on Indian States](https://www.rbi.org.in/Scripts/AnnualPublications.aspx?head=Handbook+of+Statistics+on+Indian+States)
+
+    -   Unit of Analysis: State
+
+    -   Years: 2011 - 2020
+
+7.  Total Fertility Rate:
+
+    -   Definition: Average number of children expected to be born to a woman over her lifetime
+
+    -   Source: [Reserve Bank of India, Handbook of Statistics on Indian States](https://www.rbi.org.in/Scripts/AnnualPublications.aspx?head=Handbook+of+Statistics+on+Indian+States)
+
+    -   Unit of Analysis: State
+
+    -   Years: 2011 - 2020
+
+8.  State-wise Unemployment Rate (Female)
+
+    -   Definition: Number of unemployed females as a percentage of the labor force
+
+    -   Source: [Reserve Bank of India, Handbook of Statistics on Indian States](https://www.rbi.org.in/Scripts/AnnualPublications.aspx?head=Handbook+of+Statistics+on+Indian+States)
+
+    -   Unit of Analysis: State
+
+    -   Years: 2011 - 2020
 
 # References
