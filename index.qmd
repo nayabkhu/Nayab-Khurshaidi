@@ -2,12 +2,12 @@
 title: "Nayab Khurshaidi"
 ---
 
-*Candidate for Bachelor of Arts in Philosophy, Politics, and Economics*
+> *Candidate for Bachelor of Arts in Philosophy, Politics, and Economics*
+>
+> The University of Pennsylvania
+>
+> [nayabkhu\@sas.upenn.edu]{.underline}
 
-The University of Pennsylvania
+# Recent Projects:
 
-[nayabkhu\@sas.upenn.edu]{.underline}
-
-Recent Projects:
-
-Judicial Bias and Economic Outcomes: An Analysis of Indian States \[about\] (about.qmd)
+Judicial Bias and Economic Outcomes: An Analysis of Indian States

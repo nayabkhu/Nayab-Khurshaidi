@@ -1,0 +1,2 @@
+"0","#load in data "
+"0","df <- read.csv(""/Users/nayabkhurshaidi/Documents/GitHub/Nayab Khurshaidi/Data/gdp_and_judicial.csv"")"

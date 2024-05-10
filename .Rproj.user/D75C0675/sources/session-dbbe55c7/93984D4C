@@ -1,14 +1,14 @@
 {
     "id": "93984D4C",
-    "path": "~/Documents/GitHub/Nayab Khurshaidi/Appendix.qmd",
-    "project_path": "Appendix.qmd",
+    "path": "~/Documents/GitHub/Nayab Khurshaidi/Judicial Bias Project.qmd",
+    "project_path": "Judicial Bias Project.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "2709425445",
     "contents": "",
     "dirty": false,
     "created": 1715298873702.0,
     "source_on_save": false,
-    "relative_order": 4,
+    "relative_order": 3,
     "properties": {
         "rmdVisualMode": "false",
         "rmdVisualWrapConfigured": "true",
@@ -17,16 +17,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "cursorPosition": "1,8",
-        "scrollLine": "0",
-        "rmdVisualModeLocation": "42:0"
+        "cursorPosition": "270,19",
+        "scrollLine": "257",
+        "rmdVisualModeLocation": "9431:2700.5"
     },
     "folds": "",
-    "lastKnownWriteTime": 1715299043,
+    "lastKnownWriteTime": 1715302558,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1715299044011,
+    "last_content_update": 1715302558173,
     "read_only": false,
     "read_only_alternatives": []
 }
