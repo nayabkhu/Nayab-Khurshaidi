@@ -1,0 +1,7 @@
+"0","model7 <- lm(GDP ~ unemr, data = df)"
+"0",""
+"0","modelsummary("
+"0","  model7,"
+"0","  estimate  = ""{estimate}{stars} ({std.error})"","
+"0","             statistic = NULL,"
+"0","  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')"

@@ -1,0 +1,1 @@
+"0","gdp_and_judicial <- merge(long_gdp_data, final_df, by = c(""state_code"", ""year""), all.x = TRUE)"

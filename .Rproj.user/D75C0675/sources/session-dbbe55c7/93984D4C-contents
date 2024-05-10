@@ -22,6 +22,7 @@ library(dplyr)
 library(gt)
 library(psych)
 library(ggplot2)
+library(modelsummary)
 ```
 
 # Introduction
@@ -286,7 +287,83 @@ $$
 
 # Findings
 
+```{r, echo=FALSE}
+model1 <- lm(GDP ~ diff_acquittal, data = df)
+
+modelsummary(
+  model1,
+  estimate  = "{estimate}{stars} ({std.error})",
+             statistic = NULL,
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+```
+```{r, echo=FALSE}
+model2 <- lm(GDP ~ diff_acquittal + (diff_acquittal)^2, data = df)
+
+modelsummary(
+  model2,
+  estimate  = "{estimate}{stars} ({std.error})",
+             statistic = NULL,
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+```
+```{r, echo=FALSE}
+modelcontrol <- lm(GDP ~ diff_acquittal + pop_growth, data = df)
+
+modelsummary(
+  modelcontrol,
+  estimate  = "{estimate}{stars} ({std.error})",
+             statistic = NULL,
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+```
+
 # Empirical Extension Findings
+
+```{r}
+model3 <- lm(GDP ~ diff_dismissal, data = df)
+
+modelsummary(
+  model3,
+  estimate  = "{estimate}{stars} ({std.error})",
+             statistic = NULL,
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+```
+```{r}
+model4 <- lm(GDP ~ diff_conviction, data = df)
+
+modelsummary(
+  model4,
+  estimate  = "{estimate}{stars} ({std.error})",
+             statistic = NULL,
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+```
+
+
+```{r}
+model5 <- lm(GDP ~ mmr, data = df)
+modelsummary(
+  model5,
+  estimate  = "{estimate}{stars} ({std.error})",
+             statistic = NULL,
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+```
+
+```{r}
+model6 <- lm(GDP ~ tfr, data = df)
+
+modelsummary(
+  model6,
+  estimate  = "{estimate}{stars} ({std.error})",
+             statistic = NULL,
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+```
+```{r}
+model7 <- lm(GDP ~ unemr, data = df)
+
+modelsummary(
+  model7,
+  estimate  = "{estimate}{stars} ({std.error})",
+             statistic = NULL,
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+```
 
 # Discussion and Policy Implications
 

@@ -1,0 +1,5 @@
+"0",""
+"0","#exclude rows with NA in the state code column (i.e states I am excluding from the analysis)"
+"0","long_gdp_data <- long_gdp_data %>% "
+"0","                  filter(!is.na(state_code))"
+"0",""

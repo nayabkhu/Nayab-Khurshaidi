@@ -8,8 +8,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
       - Judicial Bias Project.qmd
+      - about.qmd
 
 format:
   html:

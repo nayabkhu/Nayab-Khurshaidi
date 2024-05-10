@@ -1,0 +1,4 @@
+"0","gdp_and_judicial <- gdp_and_judicial %>%"
+"0","  mutate(diff_acquittal = male_def_acquittal_rate - female_def_acquittal_rate,"
+"0","         diff_dismissal = male_def_dismissal_rate - female_def_dismissal_rate,"
+"0","         diff_conviction = male_def_conviction_rate - female_def_conviction_rate)"

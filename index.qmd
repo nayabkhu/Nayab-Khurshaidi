@@ -10,4 +10,4 @@ title: "Nayab Khurshaidi"
 
 # Recent Projects:
 
-Judicial Bias and Economic Outcomes: An Analysis of Indian States
+[Judicial Bias and Economic Outcomes: An Analysis of Indian States](Judicial Bias Project.qmd)
