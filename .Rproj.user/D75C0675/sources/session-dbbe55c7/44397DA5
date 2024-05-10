@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/Nayab Khurshaidi/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "262522609",
+    "hash": "3899680434",
     "contents": "",
     "dirty": false,
     "created": 1715298373917.0,
@@ -16,16 +16,16 @@
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "cursorPosition": "15,0",
+        "cursorPosition": "4,0",
         "scrollLine": "0",
         "rmdVisualModeLocation": "277:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1715299396,
+    "lastKnownWriteTime": 1715299517,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1715299396170,
+    "last_content_update": 1715299517951,
     "read_only": false,
     "read_only_alternatives": []
 }

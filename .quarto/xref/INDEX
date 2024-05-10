@@ -4,5 +4,11 @@
   },
   "about.qmd": {
     "about.html": "8d984edb"
+  },
+  "Appendix.qmd": {
+    "Appendix.html": "98b121bb"
+  },
+  "Data/Data Cleaning/final_df_cleaning.Rmd": {
+    "final_df_cleaning.html": "6716d529"
   }
 }
