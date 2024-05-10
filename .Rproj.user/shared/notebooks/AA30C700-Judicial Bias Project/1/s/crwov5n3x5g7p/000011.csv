@@ -1,7 +1,0 @@
-"0","modelcontrol <- lm(GDP ~ diff_acquittal + pop_growth, data = df)"
-"0",""
-"0","modelsummary("
-"0","  modelcontrol,"
-"0","  estimate  = ""{estimate}{stars} ({std.error})"","
-"0","             statistic = NULL,"
-"0","  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')"

@@ -31,9 +31,9 @@ India, a country rife with gender-related violence, ranks 128th of 177 countries
 
 Judicial bias in the legal system is inextricably linked to other forms of gender bias in society as well, and can serve as an interesting unique avenue to view gender bias in a society. However, judicial bias is not only salient in the sphere of violent crimes against women. Reductions in gender bias in society and increase in women entering the workplace has shown to be a key indicator of increased overall productivity in society, resulting in greater economic outcomes [@Holland_Ell_2023]. A reduction in gender bias towards women in the workforce in the society has been causally related with an increase in GDP, due to an increase in overall productivity and specialized skills [@Holland_Ell_2023]. Additionally, It is well documented that a stronger, independent judiciary is an indicator of economic growth [@Kerry_Lauge]. This project will attempt to examine these theories in the context of India specifically.
 
-Two prominent studies have been conducted regarding the outcomes for women in the judicial system in India. Utilizing over 5 million lower court cases in an 8 year period, although [@casesgroup] found no specific in-group biases from male judges towards female defendants, [@jassal2023] does finds that women are still disadvantaged in the Indian courts through discrimination at several different levels including higher court dismissals and higher accused acquittals. Furthermore, in a judicial case review analysis by [@badonijudicial], it was found that judicial stereotyping was clearly evident through language in decisions from several cases concerning sexual violence against women, where women were described in terms of their “provocative clothing,” or of being “habitual to intercourse.” Moreover, it seems there is a general consensus in the public view of a need for judicial reform and improvements in India–in a study by [@garg2024role] found that 54% of people believe that a more proactive role of the Indian judiciary is “required in addressing gender-based discrimination and violence,” and 79% supported “specialized courts/tribunals to handle cases related to women’s rights.” Although judicial reform and bias is an ongoing conversation, only 2 investigations [@casesgroup; @jassal2023does] utilize real case data from India’s lower courts to analyze this issue at the state-level, rather than the national level. Furthermore, the majority of the research in India focuses on qualitative reviews of case laws and decisions, rather than outcomes. My project aims to fill this gap in the literature by addressing outcomes for women using state level panel data.
+Two prominent studies have been conducted regarding the outcomes for women in the judicial system in India. Utilizing over 5 million lower court cases in an 8 year period, although [@casesgroup] found no specific in-group biases from male judges towards female defendants, [@jassal2023does] does finds that women are still disadvantaged in the Indian courts through discrimination at several different levels including higher court dismissals and higher accused acquittals. Furthermore, in a judicial case review analysis by [@badonijudicial], it was found that judicial stereotyping was clearly evident through language in decisions from several cases concerning sexual violence against women, where women were described in terms of their “provocative clothing,” or of being “habitual to intercourse.” Moreover, it seems there is a general consensus in the public view of a need for judicial reform and improvements in India–in a study by [@garg2024role] found that 54% of people believe that a more proactive role of the Indian judiciary is “required in addressing gender-based discrimination and violence,” and 79% supported “specialized courts/tribunals to handle cases related to women’s rights.” Although judicial reform and bias is an ongoing conversation, only 2 investigations [@casesgroup; @jassal2023does] utilize real case data from India’s lower courts to analyze this issue at the state-level, rather than the national level. Furthermore, the majority of the research in India focuses on qualitative reviews of case laws and decisions, rather than outcomes. My project aims to fill this gap in the literature by addressing outcomes for women using state level panel data.
 
-Access to justice is recognized globally as a basic human right. Indeed Articles 5 through 11 of the Universal Declaration of Human Rights lay out the scope of this right to justice, and outline the rights to fair trials and punishments (cite). As Sandefeur highlights, access to justice can both expose and exacerbate societal inequalities. Furthermore, as UN Women highlights, women are usually the poorest and most marginalized parts of society, and often lack agency, and more robust judicial institutions create foundations for women to “assert and claim their social, economic, cultural, political and civil rights (UN Women). The courts have long been an avenue through which marginalized groups can access rights that have been denied to them by society, or to gain equal footing with other segments of society. Therefore, the preservation of a fair and just judicial system is extremely important, and especially important for women, especially in a country such as India, where, as I have previously established, there is such a large proliferation of gender based violence. Furthermore, as I have also established, access to justice is often better for society overall economically. I aim to add on to the research in this field by zooming in on India specifically to examine these trends.
+Access to justice is recognized globally as a basic human right. Indeed Articles 5 through 11 of the Universal Declaration of Human Rights lay out the scope of this right to justice, and outline the rights to fair trials and punishments [@United Nations]. As [@Sandefur_2008] highlights, access to justice can both expose and exacerbate societal inequalities. Furthermore, as UN Women highlights, women are usually the poorest and most marginalized parts of society, and often lack agency, and more robust judicial institutions create foundations for women to “assert and claim their social, economic, cultural, political and civil rights [@UN Women]. The courts have long been an avenue through which marginalized groups can access rights that have been denied to them by society, or to gain equal footing with other segments of society. Therefore, the preservation of a fair and just judicial system is extremely important, and especially important for women, especially in a country such as India, where, as I have previously established, there is such a large proliferation of gender based violence. Furthermore, as I have also established, access to justice is often better for society overall economically. I aim to add on to the research in this field by zooming in on India specifically to examine these trends.
 
 **To address these issues, I will examine the question:**
 
@@ -43,7 +43,7 @@ Access to justice is recognized globally as a basic human right. Indeed Articles
 
 I predict that on average, lower judicial biases in states in India (measured through differences in acquittal rates between men and women) will result in higher GDP’s in those states, displaying an inverse relationship.
 
-Research emphasizes protections and power of enforcement that is vested in the judiciary (Brookings). Substantial research emphasizes the interconnectedness of the legal system and economic performance. Lorizio et al found, for example, that economic growth in Italy was negatively affected by the confidence investors, businesses and households had in the judicial system. Furthermore, a study that used panel data from 73 countries across world regions found that access to justice is a significant positive determinant of economic growth within countries @deseau2019access. Additionally, the researchers hypothesized that the impact of access to justice could possibly be stronger in less developed countries, such as India @deseau2019access. I predict, therefore, that lower judicial biases will result in an increased ability of women to have equal opportunity and legal protection, resulting in a greater participation in the workforce, an increase in the utilization of human capital, and resulting greater economic prosperity and outcomes in those states, as measured through GDP.
+Research emphasizes protections and power of enforcement that is vested in the judiciary [@Kerry_Lauge]. Substantial research emphasizes the interconnectedness of the legal system and economic performance. [@Lorizio_Gurrieri_2014] found, for example, that economic growth in Italy was negatively affected by the confidence investors, businesses and households had in the judicial system. Furthermore, a study that used panel data from 73 countries across world regions found that access to justice is a significant positive determinant of economic growth within countries @deseau2019access. Additionally, the researchers hypothesized that the impact of access to justice could possibly be stronger in less developed countries, such as India @deseau2019access. I predict, therefore, that lower judicial biases will result in an increased ability of women to have equal opportunity and legal protection, resulting in a greater participation in the workforce, an increase in the utilization of human capital, and resulting greater economic prosperity and outcomes in those states, as measured through GDP.
 
 # Research Design
 
@@ -294,17 +294,26 @@ modelsummary(
   model1,
   estimate  = "{estimate}{stars} ({std.error})",
              statistic = NULL,
-  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.',
+  title = "GDP and Difference in Acquittal Rate")
 ```
+
 ```{r, echo=FALSE}
-model2 <- lm(GDP ~ diff_acquittal + (diff_acquittal)^2, data = df)
+
+df$diff_acquittal_squared <- df$diff_acquittal^2
+
+# Fit the regression model
+
+model2 <- lm(GDP ~ diff_acquittal + diff_acquittal_squared, data = df)
 
 modelsummary(
   model2,
   estimate  = "{estimate}{stars} ({std.error})",
              statistic = NULL,
-  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.',
+  title = "GDP and Difference in Acquittal Rate, squared")
 ```
+
 ```{r, echo=FALSE}
 modelcontrol <- lm(GDP ~ diff_acquittal + pop_growth, data = df)
 
@@ -312,57 +321,64 @@ modelsummary(
   modelcontrol,
   estimate  = "{estimate}{stars} ({std.error})",
              statistic = NULL,
-  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.',
+  title = "GDP and Difference in Acquittal Rate with Control")
 ```
 
 # Empirical Extension Findings
 
-```{r}
+```{r, echo=FALSE}
 model3 <- lm(GDP ~ diff_dismissal, data = df)
 
 modelsummary(
   model3,
   estimate  = "{estimate}{stars} ({std.error})",
              statistic = NULL,
-  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.',
+  title = "GDP and Difference in Dismissal Rate")
 ```
-```{r}
+
+```{r, echo=FALSE}
 model4 <- lm(GDP ~ diff_conviction, data = df)
 
 modelsummary(
   model4,
   estimate  = "{estimate}{stars} ({std.error})",
              statistic = NULL,
-  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.',
+  title = "GDP and Difference in Conviction Rate")
 ```
 
-
-```{r}
+```{r, echo=FALSE}
 model5 <- lm(GDP ~ mmr, data = df)
 modelsummary(
   model5,
   estimate  = "{estimate}{stars} ({std.error})",
              statistic = NULL,
-  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.',
+  title = "GDP and Maternal Mortality Ratio")
 ```
 
-```{r}
+```{r, echo=FALSE}
 model6 <- lm(GDP ~ tfr, data = df)
 
 modelsummary(
   model6,
   estimate  = "{estimate}{stars} ({std.error})",
              statistic = NULL,
-  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.',
+  title = "GDP and Total Fertility Rate")
 ```
-```{r}
+
+```{r, echo=FALSE}
 model7 <- lm(GDP ~ unemr, data = df)
 
 modelsummary(
   model7,
   estimate  = "{estimate}{stars} ({std.error})",
              statistic = NULL,
-  gof_omit = 'IC|RMSE|Log|F|R2$|Std.')
+  gof_omit = 'IC|RMSE|Log|F|R2$|Std.',
+  title = "GDP and Female Unemployment Rate")
 ```
 
 # Discussion and Policy Implications

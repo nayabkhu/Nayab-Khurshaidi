@@ -122,6 +122,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../Judicial Bias Project.html" rel="" target="">
+ <span class="menu-text">Judicial Bias and Economic Outcomes</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
@@ -485,7 +489,43 @@ Caused by warning:
 <span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">diff_conviction =</span> male_def_conviction_rate <span class="sc">-</span> female_def_conviction_rate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(gdp_and_judicial, <span class="st">"/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/gdp_and_judicial.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>populationgrowth <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"/Users/nayabkhurshaidi/Documents/GitHub/Nayab Khurshaidi/Data/Data Cleaning/populaitongrowthrate.XLSX"</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>long_growth <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(populationgrowth, <span class="at">cols =</span> <span class="st">`</span><span class="at">2011</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">2020</span><span class="st">`</span>, </span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">names_to =</span> <span class="st">"year"</span>, <span class="at">values_to =</span> <span class="st">"pop_growth"</span>)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>long_growth <span class="ot">&lt;-</span> long_growth <span class="sc">%&gt;%</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pop_growth =</span> <span class="fu">ifelse</span>(pop_growth <span class="sc">==</span> <span class="st">"."</span>, <span class="cn">NA</span>, pop_growth))</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>long_growth <span class="ot">&lt;-</span> long_growth <span class="sc">%&gt;%</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pop_growth =</span> <span class="fu">as.numeric</span>(pop_growth))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `mutate()`.
+ℹ In argument: `pop_growth = as.numeric(pop_growth)`.
+Caused by warning:
+! NAs introduced by coercion</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>state_codes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Maharashtra"</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">"Andhra Pradesh"</span> <span class="ot">=</span> <span class="dv">2</span>, <span class="st">"Karnataka"</span> <span class="ot">=</span> <span class="dv">3</span>, <span class="st">"Kerala"</span> <span class="ot">=</span> <span class="dv">4</span>, <span class="st">"Himachal Pradesh"</span> <span class="ot">=</span> <span class="dv">5</span>,</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Assam"</span> <span class="ot">=</span> <span class="dv">6</span>, <span class="st">"Jharkhand"</span> <span class="ot">=</span> <span class="dv">7</span>, <span class="st">"Bihar"</span> <span class="ot">=</span> <span class="dv">8</span>, <span class="st">"Rajasthan"</span> <span class="ot">=</span> <span class="dv">9</span>, <span class="st">"Tamil Nadu"</span> <span class="ot">=</span> <span class="dv">10</span>,</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Odisha"</span> <span class="ot">=</span> <span class="dv">11</span>, <span class="st">"Uttar Pradesh"</span> <span class="ot">=</span> <span class="dv">13</span>, <span class="st">"Haryana"</span> <span class="ot">=</span> <span class="dv">14</span>,</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Uttarakhand"</span> <span class="ot">=</span> <span class="dv">15</span>, <span class="st">"West Bengal"</span> <span class="ot">=</span> <span class="dv">16</span>, <span class="st">"Gujarat"</span> <span class="ot">=</span> <span class="dv">17</span>, <span class="st">"Chhattisgarh"</span> <span class="ot">=</span> <span class="dv">18</span>,</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Mizoram"</span> <span class="ot">=</span> <span class="dv">19</span>, <span class="st">"Tripura"</span> <span class="ot">=</span> <span class="dv">20</span>, <span class="st">"Meghalaya"</span> <span class="ot">=</span> <span class="dv">21</span>, <span class="st">"Punjab"</span> <span class="ot">=</span> <span class="dv">22</span>, <span class="st">"Madhya Pradesh"</span> <span class="ot">=</span> <span class="dv">23</span>,</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Sikkim"</span> <span class="ot">=</span> <span class="dv">24</span>, <span class="st">"Manipur"</span> <span class="ot">=</span> <span class="dv">25</span>, <span class="st">"Delhi"</span> <span class="ot">=</span> <span class="dv">26</span>, <span class="st">"Chandigarh"</span> <span class="ot">=</span> <span class="dv">27</span>, <span class="st">"Telangana"</span> <span class="ot">=</span> <span class="dv">29</span>,</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Goa"</span> <span class="ot">=</span> <span class="dv">30</span>)</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Assign codes to states in the dataset and remove states not in the key</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>long_growth<span class="sc">$</span>state_code <span class="ot">&lt;-</span> state_codes[long_growth<span class="sc">$</span>State]</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>gdp_and_judicial <span class="ot">&lt;-</span> <span class="fu">merge</span>(gdp_and_judicial, long_growth, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"state_code"</span>, <span class="st">"year"</span>), <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>gdp_and_judicial <span class="ot">&lt;-</span> gdp_and_judicial<span class="sc">%&gt;%</span></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>State.y) <span class="sc">%&gt;%</span></span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">State =</span> State.x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(gdp_and_judicial, <span class="st">"/Users/nayabkhurshaidi/Documents/GitHub/Nayab Khurshaidi/Data/Data Cleaning/gdp_and_judicial.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
