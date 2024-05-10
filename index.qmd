@@ -2,10 +2,14 @@
 title: "Nayab Khurshaidi"
 ---
 
-This is a Quarto website.blah blah blah blah 
+# **Nayab Khurshaidi**
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+*Candidate for Bachelor of Arts in Philosophy, Politics, and Economics*
 
-```{r}
-1 + 1
-```
+The University of Pennsylvania
+
+[nayabkhu\@sas.upenn.edu]{.underline}
+
+Recent Projects:
+
+Judicial Bias and Economic Outcomes: An Analysis of Indian States \[about\] (about.qmd)

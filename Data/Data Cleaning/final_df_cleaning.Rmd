@@ -1,0 +1,253 @@
+---
+title: "PSCI3800-Dataset-Final"
+author: "Nayab Khurshaidi"
+date: '2024-04-30'
+output: html_document
+---
+
+```{r}
+library(dplyr)
+library(readxl)
+library(haven)
+library(tidyr)
+```
+
+```{r}
+df_2010 <- read.csv("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/df.new.percent_2010.csv")
+df_2010 <- mutate(df_2010, year = 2010)
+
+df_2011 <- read.csv("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/df.new.percent_2011.csv")
+df_2011 <- mutate(df_2011, year = 2011)
+
+df_2012 <- read.csv("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/df.new.percent_2012.csv")
+df_2012 <- mutate(df_2012, year = 2012)
+
+df_2013 <- read.csv("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/df.new.percent_2013.csv")
+df_2013 <- mutate(df_2013, year = 2013)
+
+df_2014 <- read.csv("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/df.new.percent_2014.csv")
+df_2014 <- mutate(df_2014, year = 2014)
+
+df_2015 <- read.csv("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/df.new.percent_2015.csv")
+df_2015 <- mutate(df_2015, year = 2015)
+
+df_2016 <- read.csv("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/df.new.percent_2016.csv")
+df_2016 <- mutate(df_2016, year = 2016)
+
+df_2017 <- read.csv("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/df.new.percent_2017.csv")
+df_2017 <- mutate(df_2017, year = 2017)
+
+df_2018 <- read.csv("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/df.new.percent_2018.csv")
+df_2018 <- mutate(df_2018, year = 2018)
+```
+
+```{r}
+#combining all years data 
+final_df <- bind_rows(df_2010, df_2011, df_2012, df_2013, df_2014, df_2015, df_2016, df_2017, df_2018)
+
+column_to_move <- "year"
+
+# Get the column names
+col_names <- names(final_df)
+
+# Move the specified column to the start
+new_order <- c(column_to_move, col_names[col_names != column_to_move])
+
+# Rearrange the columns
+final_df <- final_df[new_order]
+```
+
+```{r}
+#load in GDP data 
+gdp_data <- read_excel("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/State_wise_SDP_as_on_15032024 (2).xls", skip = 4, col_names = TRUE)
+
+col_names <- c("S. No.", "State\\UT", paste0(2011:2023))
+
+# Assign the column names to the dataframe
+names(gdp_data) <- col_names
+
+# View the first few rows of the dataframe
+print(head(gdp_data))
+
+
+#Removing the percent change columns 
+gdp_data <- gdp_data[, 1:15]
+gdp_data <- gdp_data[2:34, ]
+
+#pivoting the data
+long_gdp_data <- pivot_longer(gdp_data, cols = c(`2011`:`2023`), 
+                              names_to = "year", values_to = "GDP")
+```
+
+
+```{r}
+#adding state codes to the gdp data that match the court data 
+
+long_gdp_data <- rename(long_gdp_data, State = `State\\UT`)
+
+state_codes <- c("Maharashtra" = 1, "Andhra Pradesh" = 2, "Karnataka" = 3, "Kerala" = 4, "Himachal Pradesh" = 5,
+                 "Assam" = 6, "Jharkhand" = 7, "Bihar" = 8, "Rajasthan" = 9, "Tamil Nadu" = 10,
+                 "Odisha" = 11, "Uttar Pradesh" = 13, "Haryana" = 14,
+                 "Uttarakhand" = 15, "West Bengal" = 16, "Gujarat" = 17, "Chhattisgarh" = 18,
+                 "Mizoram" = 19, "Tripura" = 20, "Meghalaya" = 21, "Punjab" = 22, "Madhya Pradesh" = 23,
+                 "Sikkim" = 24, "Manipur" = 25, "Delhi" = 26, "Chandigarh" = 27, "Telangana" = 29,
+                 "Goa" = 30)
+
+# Assuming your dataframe is named 'long_gdp_data'
+# Add a new column 'State_Code' based on the 'State\UT' column
+
+long_gdp_data$state_code <- state_codes[long_gdp_data$State]
+
+# View the first few rows of the updated dataset
+print(head(long_gdp_data))
+
+#exclude rows with NA in the state code column (i.e states I am excluding from the analysis)
+long_gdp_data <- long_gdp_data %>% 
+                  filter(!is.na(state_code))
+
+```
+
+
+```{r}
+gdp_and_judicial <- merge(long_gdp_data, final_df, by = c("state_code", "year"), all.x = TRUE)
+```
+
+```{r}
+maternal <- read_xlsx("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/maternal mortality ratio.XLSX", col_names = TRUE)
+
+colnames(maternal) <- c("State", "2001", "2003", "2006", "2009", "2012", "2013", "2016", "2017", "2018", "2019", "2020")
+
+colnames(maternal) <- as.character(colnames(maternal))
+
+maternal[, c("2017", "2018", "2019", "2020")] <- lapply(maternal[, c("2017", "2018", "2019", "2020")], as.character)
+
+# Pivot longer
+long_maternal <- pivot_longer(maternal, cols = `2001`:`2020`, 
+                              names_to = "year", values_to = "mmr")
+
+#replace dashes with NA
+long_maternal <- long_maternal %>%
+  mutate(mmr = ifelse(mmr == "-", NA, mmr))
+
+long_maternal <- long_maternal %>%
+  mutate(mmr = as.numeric(mmr))
+```
+
+```{r}
+state_codes <- c("Maharashtra" = 1, "Andhra Pradesh" = 2, "Karnataka" = 3, "Kerala" = 4, "Himachal Pradesh" = 5,
+                 "Assam" = 6, "Jharkhand" = 7, "Bihar" = 8, "Rajasthan" = 9, "Tamil Nadu" = 10,
+                 "Odisha" = 11, "Uttar Pradesh" = 13, "Haryana" = 14,
+                 "Uttarakhand" = 15, "West Bengal" = 16, "Gujarat" = 17, "Chhattisgarh" = 18,
+                 "Mizoram" = 19, "Tripura" = 20, "Meghalaya" = 21, "Punjab" = 22, "Madhya Pradesh" = 23,
+                 "Sikkim" = 24, "Manipur" = 25, "Delhi" = 26, "Chandigarh" = 27, "Telangana" = 29,
+                 "Goa" = 30)
+
+# Assign codes to states in the dataset and remove states not in the key
+long_maternal$state_code <- state_codes[long_maternal$State]
+
+long_maternal <- long_maternal %>%
+  filter(State != "Others")
+
+gdp_and_judicial <- merge(gdp_and_judicial, long_maternal, by = c("state_code", "year"), all.x = TRUE)
+
+gdp_and_judicial <- gdp_and_judicial%>%
+  select(-State.y) %>%
+  rename(State = State.x)
+```
+
+```{r}
+unemployment <- read_xlsx("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/unemployment rate urban female.XLSX", col_names = TRUE)
+
+
+unemployment[,"2020"] <- lapply(unemployment[,"2020"], as.character)
+
+long_unemployment <- pivot_longer(unemployment, cols = `1994`:`2023`, 
+                              names_to = "year", values_to = "unemr")
+
+
+#replace dashes with NA
+long_unemployment <- long_unemployment %>%
+  mutate(unemr = ifelse(unemr == ".", NA, unemr))
+
+long_unemployment <- long_unemployment %>%
+  mutate(unemr = as.numeric(unemr))
+
+long_unemployment <- long_unemployment%>%
+    rename( State = 'State/Union Territory' )
+
+state_codes <- c("Maharashtra" = 1, "Andhra Pradesh" = 2, "Karnataka" = 3, "Kerala" = 4, "Himachal Pradesh" = 5,
+                 "Assam" = 6, "Jharkhand" = 7, "Bihar" = 8, "Rajasthan" = 9, "Tamil Nadu" = 10,
+                 "Odisha" = 11, "Uttar Pradesh" = 13, "Haryana" = 14,
+                 "Uttarakhand" = 15, "West Bengal" = 16, "Gujarat" = 17, "Chhattisgarh" = 18,
+                 "Mizoram" = 19, "Tripura" = 20, "Meghalaya" = 21, "Punjab" = 22, "Madhya Pradesh" = 23,
+                 "Sikkim" = 24, "Manipur" = 25, "Delhi" = 26, "Chandigarh" = 27, "Telangana" = 29,
+                 "Goa" = 30)
+
+# Assign codes to states in the dataset and remove states not in the key
+long_unemployment$state_code <- state_codes[long_unemployment$State]
+
+gdp_and_judicial <- merge(gdp_and_judicial, long_unemployment, by = c("state_code", "year"), all.x = TRUE)
+
+gdp_and_judicial <- gdp_and_judicial%>%
+  select(-State.y) %>%
+  rename(State = State.x)
+
+```
+
+```{r}
+
+fertility1 <- read_xlsx("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/fertility.XLSX", col_names = TRUE, sheet = "sheet1")
+
+fertility2 <- read_xlsx("/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/fertility.XLSX", col_names = TRUE, sheet = "sheet2")
+
+fertility2 <- fertility2 %>%
+  select(-Year)
+
+fertility <- bind_cols(fertility1, fertility2)
+fertility[, 13:19] <- lapply(fertility[, 13:19], as.character)
+
+sapply(fertility, class)
+
+long_fertility <- pivot_longer(fertility, cols = `2003`:`2020`, 
+                              names_to = "year", values_to = "tfr")
+
+#replace dashes with NA
+long_fertility <- long_fertility %>%
+  mutate(tfr = ifelse(tfr == ".", NA, tfr))
+
+
+long_fertility <- long_fertility %>%
+  mutate(tfr = as.numeric(tfr))
+
+long_fertility <- long_fertility%>%
+    rename( State = 'Year' )
+
+state_codes <- c("Maharashtra" = 1, "Andhra Pradesh" = 2, "Karnataka" = 3, "Kerala" = 4, "Himachal Pradesh" = 5,
+                 "Assam" = 6, "Jharkhand" = 7, "Bihar" = 8, "Rajasthan" = 9, "Tamil Nadu" = 10,
+                 "Odisha" = 11, "Uttar Pradesh" = 13, "Haryana" = 14,
+                 "Uttarakhand" = 15, "West Bengal" = 16, "Gujarat" = 17, "Chhattisgarh" = 18,
+                 "Mizoram" = 19, "Tripura" = 20, "Meghalaya" = 21, "Punjab" = 22, "Madhya Pradesh" = 23,
+                 "Sikkim" = 24, "Manipur" = 25, "Delhi" = 26, "Chandigarh" = 27, "Telangana" = 29,
+                 "Goa" = 30)
+
+# Assign codes to states in the dataset and remove states not in the key
+long_fertility$state_code <- state_codes[long_fertility$State]
+
+gdp_and_judicial <- merge(gdp_and_judicial, long_fertility, by = c("state_code", "year"), all.x = TRUE)
+
+gdp_and_judicial <- gdp_and_judicial%>%
+  select(-State.y) %>%
+  rename(State = State.x)
+
+```
+
+```{r}
+gdp_and_judicial <- gdp_and_judicial %>%
+  mutate(diff_acquittal = male_def_acquittal_rate - female_def_acquittal_rate,
+         diff_dismissal = male_def_dismissal_rate - female_def_dismissal_rate,
+         diff_conviction = male_def_conviction_rate - female_def_conviction_rate)
+```
+
+```{r}
+write.csv(gdp_and_judicial, "/Users/nayabkhurshaidi/Desktop/Cleaned data - PSCI/gdp_and_judicial.csv", row.names = FALSE)
+```
